@@ -11,3 +11,4 @@ This autoclicker is over 1000x better than the "best one ever".
 It's not a virus.
  - This autoclicker MIGHT have a false positive, this is becuase it is large and uses "ctypes" to bypass autoclicker detectors. It uses OS clicks to do this.
  - The source code is in "src.py"
+ 
