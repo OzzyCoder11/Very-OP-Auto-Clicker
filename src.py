@@ -10,7 +10,7 @@ class FastAutoClicker:
         self.running = False
         self.stop_event = threading.Event()
         self.click_thread = None
-        self.hotkey = 'ctrl+z'  # Default hotkey
+        self.hotkey = 'ctrl+z'  # default
         self.ui = None
 
     def fast_click(self):
@@ -36,7 +36,7 @@ class FastAutoClicker:
             self.ui.update_status("Running")
 
     def set_hotkey(self, hotkey):
-        keyboard.unhook_all_hotkeys()  # Unhook all hotkeys
+        keyboard.unhook_all_hotkeys()  # unhook all hotkeys
         self.hotkey = hotkey
         keyboard.add_hotkey(self.hotkey, self.toggle)
         self.ui.update_status(f"Hotkey updated to: {hotkey}")
@@ -52,7 +52,7 @@ class AutoClickerUI:
         self.window = ctk.CTk()
         self.window.title("Auto-Clicker")
 
-        # Configure the window appearance
+        # configure the window appearance
         ctk.set_appearance_mode("System")
         ctk.set_default_color_theme("blue")
 
@@ -77,11 +77,11 @@ class AutoClickerUI:
     def set_hotkey_from_keypress(self, event):
         key = event.keysym
         modifiers = []
-        if event.state & 0x0004:  # Control
+        if event.state & 0x0004:  # control
             modifiers.append("ctrl")
-        if event.state & 0x0001:  # Shift
+        if event.state & 0x0001:  # shift
             modifiers.append("shift")
-        if event.state & 0x0008:  # Alt
+        if event.state & 0x0008:  # alt
             modifiers.append("alt")
 
         hotkey = "+".join(modifiers + [key.lower()])
@@ -94,6 +94,6 @@ class AutoClickerUI:
     def run(self):
         self.window.mainloop()
 
-# Initialize and start the auto-clicker with the UI
+# start up
 clicker = FastAutoClicker()
 clicker.start()
