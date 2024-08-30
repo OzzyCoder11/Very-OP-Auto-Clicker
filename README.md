@@ -3,6 +3,7 @@
 **Download:** https://github.com/OzzyCoder11/Very-OP-Auto-Clicker/releases/download/v0s/Very-OP-Auto-Clicker.exe
 
 Very OP Auto Clicker: 1422.22 MAX CPS
+
 OP Auto Clicker: 46.21 MAX CPS
 
 This autoclicker is over 1000x better than the "best one ever". 
